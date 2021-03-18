@@ -30,7 +30,8 @@ file::~file() {
     inFile.close();
 }
 
-struct rc {
+struct rc 
+{
     int row;
     int column;
 };
@@ -95,10 +96,9 @@ void file::loop()
     }
 }
 
-int main() {
-
+int main() 
+{
     file inFile;
     inFile.loop();
-
     return 0;
 }
