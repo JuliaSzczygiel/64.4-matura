@@ -46,15 +46,15 @@ void file::loop()
     string row[21];
     string column[21];
 
-    while (tab >> a) 
+    while(tab >> a) 
     {
-        for (int b = 0; b < sizeof(tab) && inFile >> a; b++) 
+        for(int b = 0; b < sizeof(tab) && inFile >> a; b++) 
         {
-            for (int i=0; i<=20; i++) 
+            for(int i=0; i<=20; i++) 
             {
                 inFile >> row[i];
 
-                for (int j=0; j<=20; j++)
+                for(int j=0; j<=20; j++)
                 {
                     inFile >> column[j];
 
@@ -62,33 +62,30 @@ void file::loop()
                     {
                         inFile >> sum;
                     }
-
                     cout << '\n';
-
-                    for (int k=0; k<=20; k++) 
+                    
+                    for(int k=0; k<=20; k++) 
                     {
-                        for (int d=0; d<=21; d++) 
+                        for(int d=0; d<=21; d++) 
                         {
-                            if (row & column % 2 == 0) 
+                            if(row & column % 2 == 0) 
                             {
                                 int sum = 0;
 
-                                if ((sum%2 == 0 && row[i][20] !='0') || (sum%2 == 1 && row[i][20] =='1')) 
+                                if((sum%2 == 0 && row[i][20] !='0') || (sum%2 == 1 && row[i][20] =='1')) 
                                 { 
                                     cout << Row << "," << '\n';
                                     Row++;
                                 }
 
-                                if ((sum%2 == 0 && column[j][20] !='0') || (sum%2 == 1 && column[j][20] =='1')) 
+                                if((sum%2 == 0 && column[j][20] !='0') || (sum%2 == 1 && column[j][20] =='1')) 
                                 {
                                     cout << Column << "," << '\n';
                                     Column++;
                                 }
-
                             }
-
                         }
-                            dane.close();
+                        dane.close();
                     }
                 }
             }
