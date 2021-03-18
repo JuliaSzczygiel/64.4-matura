@@ -6,7 +6,8 @@
 #include <stdlib.h>
 using namespace std;
 
-class file {  
+class file 
+{  
     protected:
         ifstream inFile;      
                
@@ -16,17 +17,19 @@ class file {
         void loop();
 };
 
-file::file() {
+file::file() 
+{
     inFile.open("dane_obrazki.txt");
     if (!inFile.good())
         {
-                cerr << "Blad - pliku nie da sie otworzyc!\n";
-                exit(1);
+            cerr << "Blad - pliku nie da sie otworzyc!\n";
+            exit(1);
         }
 }
 
 
-file::~file() {
+file::~file() 
+{
     inFile.close();
 }
 
